@@ -161,7 +161,7 @@
                 <section id="team">
                     <div class="member">
                         <div id="John-photo" class="member-photo">
-                            <a href="#"><img src="symbol.png" title="get in touch" class="link-img"></a>
+                            <a href="#"><img src="Symbol.png" title="get in touch" class="link-img"></a>
                             <center>
                             <div class="human-info" v-if="ru">
                                 <h5 class="human-name">Джон</h5>
@@ -176,7 +176,7 @@
                     </div>
                     <div class="member">
                         <div id="Selena-photo" class="member-photo">
-                            <a href="#"><img src="symbol.png" title="get in touch" class="link-img"></a>
+                            <a href="#"><img src="Symbol.png" title="get in touch" class="link-img"></a>
                             <center>
                             <div class="human-info" v-if="ru">
                                 <h5 class="human-name">Селена</h5>
@@ -191,7 +191,7 @@
                     </div>
                     <div class="member">
                         <div id="Maria-photo" class="member-photo">
-                            <a href="#"><img src="symbol.png" title="get in touch" class="link-img"></a>
+                            <a href="#"><img src="Symbol.png" title="get in touch" class="link-img"></a>
                             <center>
                             <div class="human-info" v-if="ru">
                                 <h5 class="human-name">Мария</h5>
@@ -280,7 +280,7 @@
                         </div>
                     </div>
                 </section>
-                <aside id="video-click" v-if="videoShow">
+                <aside id="video-click" v-if="videoShow" v-on:click="videoShow=false">
                     <div id="video-control">
                         <center>
                         <video v-bind:src="videoSource" 
