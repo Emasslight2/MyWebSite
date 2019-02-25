@@ -48,7 +48,7 @@
             </nav>
             
             <div id="header-bg-img">
-                <div id="header-text-space">
+                
                     <article id="header-text-group">
                         <h1 id="header-h1-text" v-if="ru" v-text="text_ru.header.header_h1"></h1>
                         <h1 id="header-h1-text" v-else v-text="text_eng.header.header_h1"></h1>
@@ -58,7 +58,7 @@
                             <p id="header-text" v-else v-text="text_eng.header.header_text"></p>
                         </div>
                     </article>
-                </div>
+                
                 <center><img src="Mouse_scroll_ic.png" id="mouse-image"></center>
             </div>
         </header>
@@ -104,7 +104,7 @@
                         
                             <transition-group name="list-complete" class="list-complete" tag="section">
                                 <div v-for="img in filteredImages" v-bind:key="img.id" class="list-complete-item">
-                                    <a href="#"><img class="list-complete-img" :src="img.image" :alt="img.image" />
+                                    <a href="#" class="work-cntr"><img class="list-complete-img" :src="img.image" :alt="img.image" />
                                     <div v-for="index in 1" class="img-text-space">
                                         <h4 v-if="ru" v-text="img.name_ru" class="img-name"></h4> 
                                         <h4 v-else v-text="img.name_eng" class="img-name"></h4> 
@@ -135,7 +135,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="half-section">
+                <section class="half-section" id="space-clients">
                     <h2 class="intros" v-if="ru" v-text="text_ru.main.clients_sec.intro">Our clients</h2>
                     <h2 class="intros" v-else v-text="text_eng.main.clients_sec.intro">Our clients</h2>
                     <hr class="section-hr">
@@ -205,9 +205,9 @@
                         </div>
                     </div>
                     <div class="member" id="we-are-hiring" v-if="applyVisibility==false">
-                        <h2 class="intros" style="margin:30px;padding:0;" v-if="ru">Мы нанимаем!</h2>
-                        <h2 class="intros" style="margin:30px;padding:0;" v-else>We are hiring</h2>
-                        <hr class="section-hr" style="margin:30px;padding:0;">
+                        <h2 class="intros"  v-if="ru">Мы нанимаем!</h2>
+                        <h2 class="intros"  v-else>We are hiring</h2>
+                        <hr class="section-hr" >
                         <span id="apply-btn" v-on:click="applyVisibility=true" v-if="ru">Подать</span>
                         <span id="apply-btn" v-on:click="applyVisibility=true" v-else>Apply</span>
                     </div>
@@ -294,7 +294,7 @@
                 </aside>
             </section>
             <section id="why-choose-us">
-                <section>
+                <section class="sec-text-cntr">
                     <h2 class="intros" v-if="ru" v-text="text_ru.main.why_choose_us.intro"></h2>
                     <h2 class="intros" v-else v-text="text_eng.main.why_choose_us.intro"></h2>
                     <hr class="section-hr">
@@ -333,7 +333,7 @@
                 </div>
             </section>
             <section id="get-in-touch-sec">
-                <section>
+                <section class="sec-text-cntr">
                     <h2 class="intros" v-if="ru" v-text="text_ru.main.get_in_touch.intro"></h2>
                     <h2 class="intros" v-else v-text="text_eng.main.get_in_touch.intro"></h2>
                     <hr class="section-hr">
@@ -344,7 +344,7 @@
                 </section>
                 <section id="info-and-form">
                     <aside id="location-info">
-                        <div id="info-cntr">
+                        <div id="info-cntr" class="sec-text-cntr">
                             <h6 class="h6-caps" v-if="ru">Наше местоположение</h6>
                             <h6 class="h6-caps" v-else>Our location</h6>
                             <div id="info-text-group" v-if="ru">
@@ -368,7 +368,7 @@
                             </div>
                         </div>
                     </aside>
-                    <form id="contact-form" method="POST">
+                    <form id="contact-form" method="POST" class="sec-text-cntr">
                         <div id="form-cntr">
                             <div id="inputs-cntr">
                                 <div class="form-input-div name-email-inputs-div">
@@ -400,7 +400,7 @@
                 <div id="footer-logo-div">
                     <img src="footer-logo.png">
                 </div>
-                <div id="footer-copyright-div">
+                <div id="footer-copyright-div" class="sec-text-cntr">
                     <p id="copyright" v-if="ru">2014 &copy; <a href="#">Самир Тимезгайда.</a> Все права сохранены</p>
                     <p id="copyright" v-else>2014 &copy; <a href="#">Samir Timezguida.</a> All right Reserved</p>
                 </div>
